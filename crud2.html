@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript CRUD</title>
+</head>
+
+<body>
+
+    <h2>User Form</h2>
+    <input type="text" id="name" placeholder="Enter name">
+    <input type="number" id="age" placeholder="Enter age">
+    <button onclick="addOrUpdateUser()" id="submitBtn">Add User</button>
+
+    <h3>Filter Users</h3>
+    <select id="filterBy" onchange="toggleFilterInput()">
+        <option value="">Select Filter</option>
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+    </select>
+
+    <input type="text" id="filterInput" placeholder="Enter value" style="display:none;" />
+    <button onclick="filterUsers()">Filter</button>
+    <button onclick="clearFilter()">Clear</button>
+    <button onclick="sortUsers()">Sort</button>
+
+    <h3>User List</h3>
+    <div id="userList"></div>
+
+    <h3>Array Content</h3>
+    <pre id="arrayData" style="background:#eee; padding:10px;"></pre>
+
+    <script src="crud2.js"></script>
+
+</body>
+
+</html>
